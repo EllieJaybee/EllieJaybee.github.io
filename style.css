@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Koulen&display=swap');
+
+@keyframes bgrad {
+	0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+
+@keyframes blink {
+  50%{opacity: 0;}
+}
+
+@keyframes wiggle {
+  25%{transform: skewY(10deg);}
+  50%{transform: skewY(0deg);}
+  75%{transform: skewY(-10deg);}
+  100%{transform: skewY(0deg);}
+}
+
+body {
+  color: black;
+  font-family: 'Koulen', cursive, Verdana, Tahoma, sans-serif;
+  font-size: xx-large;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#go {
+  font-family: 'Indie Flower', cursive;
+  font-size: large;
+}
+
+#random {
+  cursor: pointer;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+input[type=text] {
+  background-color: transparent;
+  border: none;
+  width: 1em;
+  transition-duration: 0.5s;
+}
+
+input[type=text]:hover {
+  cursor: text;
+}
+
+input[type=text]:focus-visible {
+  outline: none;
+}
+
+input[type=text]::-webkit-calendar-picker-indicator {
+  display: none !important;
+}
+
+::placeholder {
+  color: black;
+}
+
+.maincon {
+  height: 100vh;
+  width: 100vw;
+  background-size: 400% 400%;
+  animation: bgrad 20s ease infinite;
+  background-image: linear-gradient(45deg, #642CA9, #FF36AB, #FF74D4, #FFB8DE);
+}
+
+#pfp {
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  transition-duration: 0.5s;
+  margin-right: 1vw;
+}
+
+#pfp:hover {
+  filter: invert();
+  transform: scaleY(-1);
+}
+
+.icons {
+  gap: 2vw;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.item {
+  display: flex;
+  flex: auto auto auto;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+}
+
+.dot {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  transition-duration: 0.5s;
+}
+
+.twt:hover {
+  background-color: rgb(29,161,242);
+}
+
+.ptr:hover {
+  background-color: rgb(247,102,84);
+}
+
+.dsc:hover {
+  background-color: rgb(88,101,242);
+}
+
+.stm:hover {
+  background-color: rgb(52, 92, 244);
+}
+
+.ins:hover {
+  background-color: rgb(138, 58, 185);
+}
+
+.kfi:hover {
+  background-color: rgb(255, 94, 91);
+}
+
+.fbk:hover {
+  background-color: rgb(66 103 178);
+}
+
+.ytb:hover {
+  background-color: rgb(255, 0, 0);
+}
+
+.twc:hover {
+  background-color: rgb(145, 70, 255);
+}
+
+.vertical {
+  flex-direction: column;
+}
+
+.box {
+  margin-bottom: auto;
+}
+
+.shuffle {
+  margin-top: auto;
+  margin-bottom: 5vh;
+  transition-duration: 0.5s;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.shuffle:hover {
+  scale: 120%;
+  animation: wiggle 2s linear infinite;
+}
+
+@media only screen and (min-width: 768px) {
+  .sepa {
+    display: block;
+    height: 50px;
+    width: 0.25rem;
+    background: black;
+    border: none;
+    margin-left: 1vw;
+    margin-right: 1vw;
+  }
+  
+  .container {
+    flex-wrap: nowrap;
+  }
+}
+
+.blinking {
+  animation: blink 1s step-end infinite;
+}
+
+span {
+  background: none;
+  border: none;
+  font-size: xx-large;
+  outline: none;
+  position: absolute;
+  left: -9999px;
+  display: inline-block;
+  min-width: 1em;
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 5px dashed #888;
+  width: 30%;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
