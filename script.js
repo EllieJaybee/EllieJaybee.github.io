@@ -7,6 +7,7 @@ const iconDict = {
   kfi: "coin30.png",
   ptr: "patreon.svg",
   stm: "steam.svg",
+  tkt: "tiktok.svg",
   twc: "twitch.svg",
   twt: "twitter.svg",
   ytb: "youtube.svg"

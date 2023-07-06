@@ -147,6 +147,10 @@ button {
   background-color: rgb(145, 70, 255);
 }
 
+.tkt:hover {
+  background-color: rgb(221, 59, 59);
+}
+
 .vertical {
   flex-direction: column;
 }
