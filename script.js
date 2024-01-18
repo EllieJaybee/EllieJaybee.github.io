@@ -3,6 +3,7 @@ import femDict from "./femboys/list.js"
 const iconDict = {
   dsc: "discord.svg",
   fbk: "facebook.svg",
+  fdi: "fediverse.png",
   ins: "instagram.svg",
   kfi: "coin30.png",
   ptr: "patreon.svg",
