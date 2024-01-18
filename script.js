@@ -58,7 +58,8 @@ document.getElementById("random").onclick = function() {
 function search() {
   try {
     var femname = feminput.value.toLowerCase().trim();
-    pfp.src = femDict[`${femname}`].pfp;
+    //pfp.src = femDict[`${femname}`].pfp;
+    pfp.src = `https://femboy.my/${femname}/avatar.png`
     document.getElementsByClassName("maincon")[0].style.backgroundImage = `linear-gradient(45deg, ${femDict[femname].colors})`;
     var femsocials = document.getElementsByClassName("icons")[0];
     femsocials.innerHTML = "";
