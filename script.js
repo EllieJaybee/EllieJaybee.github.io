@@ -58,8 +58,8 @@ document.getElementById("random").onclick = function() {
 function search() {
   try {
     var femname = feminput.value.toLowerCase().trim();
-    pfp.src = `https://femboy.my/${femname}/avatar.png`
     document.getElementsByClassName("maincon")[0].style.backgroundImage = `linear-gradient(45deg, ${femDict[femname].colors})`;
+    pfp.src = `https://femboy.my/${femname}/avatar.png`
     var femsocials = document.getElementsByClassName("icons")[0];
     femsocials.innerHTML = "";
     for (var i in femDict[femname].socials) {
